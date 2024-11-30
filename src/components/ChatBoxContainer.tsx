@@ -48,9 +48,9 @@ export default function ChatBoxContainer({
 
   return (
     <div
-      className={`bg-gray-100 rounded-xl shadow-2xl w-full flex-grow transform transition-all duration-500 ease-in-out ${
+      className={` rounded-xl shadow-2xl w-full flex-grow transform transition-all duration-500 ease-in-out ${
         isOpen ? "scale-100 opacity-100" : "scale-95 opacity-90 "
-      } border-black hover:cursor-pointer`}
+      } border-black`}
       style={{
         height: isMobile ? `calc(${windowHeight}px - 100px)` : "75vh", // Adjust for mobile
         maxHeight: "90vh", // Set max height for larger screens
@@ -59,10 +59,7 @@ export default function ChatBoxContainer({
         willChange: "transform, opacity",
       }}
     >
-      <div
-        className="w-full h-full overflow-hidden rounded-xl"
-
-      >
+      <div className="w-full h-full overflow-hidden rounded-xl">
         <div className="sm:hidden absolute top-4 left-4 z-10">
           <button
             className={`text-gray-600 hover:text-gray-900 transition-all duration-300 ${isOpen ? "rotate-180" : ""}`}

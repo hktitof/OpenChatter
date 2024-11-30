@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import DefaultIcon from "./DefaultIcon";
 import ChatBoxContainer from "./ChatBoxContainer";
 import ChatBoxContent from "./ChatBoxContent";
+import CloseIcon from "./CloseIcon";
 
-const ChatBox: React.FC = () => {
+const ChatBox: React.FC = ({}) => {
   const [windowHeight, setWindowHeight] = useState<number>(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -22,8 +23,11 @@ const ChatBox: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 pointer-events p-4 h-full">
-      <div className="absolute bottom-4 right-4 left-4 w-auto sm:right-5 sm:left-auto sm:w-full sm:max-w-md">
+    <div className="fixed inset-0 z-50  pointer-events p-4 h-full">
+      <div
+        className="absolute bottom-4 right-4 left-4 w-auto sm:right-5 sm:left-auto sm:w-full sm:max-w-md"
+        // force this div to be at be on the top of all the elements exist in the page
+      >
         <div className={`relative h-full  ${isOpen ? "flex-col space-y-2 " : ""}`}>
           {/* Chat Box */}
           {isOpen && (
@@ -41,7 +45,7 @@ const ChatBox: React.FC = () => {
                 animation: "bounce 1s ease-out 3", // Always triggers 3 bounces
               }}
             >
-              <DefaultIcon />
+              {isOpen ? <CloseIcon /> : <DefaultIcon />}
             </div>
 
             {/* Define the bounce animation */}

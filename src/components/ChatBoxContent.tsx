@@ -4,14 +4,25 @@ export default function ChatBoxContent() {
   return (
     <div className="h-full flex flex-col">
       {/* Content Area */}
-      <div className="flex-grow p-4 space-y-4 overflow-auto">
-        {/* Messages will go here */}
-        <div className="space-y-2">
-          <div className="bg-gray-200 p-3 rounded-lg max-w-xs">
-            <p className="text-sm">Hello, how can I assist you today?</p>
-          </div>
-          <div className="bg-blue-200 p-3 rounded-lg self-end max-w-xs">
-            <p className="text-sm">I need help with my order.</p>
+      <div className="flex-grow space-y-4 overflow-auto">
+        {/* // create a color div with bg-blue-400 */}
+        <div className=" border pb-4 rounded-t flex-col">
+          <div className="w-full pl-5 pt-5 flex flex-row">
+            <div className="w-10 h-110 bg-white rounded-full flex items-center justify-center  flex-col relative">
+              <div className="w-3 h-3 bg-green-500 rounded-full absolute bottom-0 right-0 z-10 "></div>
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden flex-col ">
+                {/* // add a green circle with bg-green-400 and it should be rounded-full and above the image on the top right corner */}
+                <img
+                  src="https://www.anaflous.com/img/Portfolio-portrait-3.jpg "
+                  alt="My Image Not Found"
+                  class="object-contain rounded-lg translate-y-[2px]"
+                />
+              </div>
+            </div>
+            <div className="flex-col pl-3 text-sm">
+              <p className="text-gray-500">Abdellatif Anaflous</p>
+              <p className="text-gray-400">Online</p>
+            </div>
           </div>
         </div>
       </div>

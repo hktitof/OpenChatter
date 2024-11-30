@@ -27,10 +27,11 @@ const WindowSizeDisplay: React.FC = () => {
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, []); // Empty dependency array ensures this only runs once when the component mounts
+  }, []);
+   // Empty dependency array ensures this only runs once when the component mounts
 
   return (
-    <div className="fixed top-0 left-0 p-4 bg-white text-black z-50">
+    <div className="bg-white text-black">
       <div>
         <strong>Window Size:</strong>
       </div>
