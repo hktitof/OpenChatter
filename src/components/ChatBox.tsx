@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import DefaultIcon from "./DefaultIcon";
 import ChatBoxContainer from "./ChatBoxContainer";
 import ChatBoxContent from "./ChatBoxContent";
@@ -7,7 +7,6 @@ import CloseIcon from "./CloseIcon";
 const ChatBox: React.FC = ({}) => {
   const [windowHeight, setWindowHeight] = useState<number>(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     // Set the window height on mount and on resize
@@ -22,16 +21,6 @@ const ChatBox: React.FC = ({}) => {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
-
-  useEffect(() => {
-    // Preload the image only once
-    if (!imageLoaded) {
-      const img = new Image();
-      img.src = "https://www.anaflous.com/img/Portfolio-portrait-3.jpg"; // Image URL
-      img.onload = () => setImageLoaded(true); // Mark as loaded once the image is fully loaded
-    }
-  }, [imageLoaded]); // Only runs once due to imageLoaded flag
-
 
   return (
     <div
@@ -49,11 +38,7 @@ const ChatBox: React.FC = ({}) => {
           <div className={`relative h-full  ${isOpen ? "flex-col space-y-2 " : ""}`}>
             {/* Chat Box */}
             {isOpen && (
-              <ChatBoxContainer
-                windowHeight={windowHeight}
-                setWindowHeight={setWindowHeight}
-                isOpen={isOpen}
-              >
+              <ChatBoxContainer windowHeight={windowHeight} setWindowHeight={setWindowHeight} isOpen={isOpen}>
                 <ChatBoxContent />
               </ChatBoxContainer>
             )}
@@ -61,7 +46,6 @@ const ChatBox: React.FC = ({}) => {
             {/* Chatbox Component Circle Button */}
             <div className="flex justify-end z-50 pointer-events-auto">
               <div
-               
                 onClick={() => setIsOpen(prev => !prev)}
                 className="bg-blue-400 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center hover:cursor-pointer bounce-animation"
                 style={{
