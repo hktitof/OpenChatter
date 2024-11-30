@@ -50,7 +50,7 @@ export default function ChatBoxContainer({
     <div
       className={` rounded-xl shadow-2xl w-full flex-grow transform transition-all duration-500 ease-in-out ${
         isOpen ? "scale-100 opacity-100" : "scale-95 opacity-90 "
-      } border-black`}
+      } border-black pointer-events-auto`}
       style={{
         height: isMobile ? `calc(${windowHeight}px - 100px)` : "75vh", // Adjust for mobile
         maxHeight: "90vh", // Set max height for larger screens

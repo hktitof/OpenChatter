@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function ChatBoxContent() {
   return (
     <div className="h-full flex flex-col">
@@ -13,9 +12,9 @@ export default function ChatBoxContent() {
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden flex-col ">
                 {/* // add a green circle with bg-green-400 and it should be rounded-full and above the image on the top right corner */}
                 <img
-                  src="https://www.anaflous.com/img/Portfolio-portrait-3.jpg "
+                  src="https://www.anaflous.com/img/Portfolio-portrait-3.jpg"
                   alt="My Image Not Found"
-                  class="object-contain rounded-lg translate-y-[2px]"
+                  className="object-contain rounded-lg translate-y-[2px]"
                 />
               </div>
             </div>

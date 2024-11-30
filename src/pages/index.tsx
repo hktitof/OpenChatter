@@ -19,12 +19,11 @@ export default function Home() {
     };
   }, []);
   return (
-    <div
-      className="bg-white relative"
-      style={{ minHeight: windowHeight }} // Use window height instead of screen height
-    >
-      <WindowSizeDisplay />
-      <ChatBox />
-    </div>
+    <>
+      <div className="bg-white" style={{ minHeight: windowHeight }}>
+        <WindowSizeDisplay />
+        <ChatBox />
+      </div>
+    </>
   );
 }

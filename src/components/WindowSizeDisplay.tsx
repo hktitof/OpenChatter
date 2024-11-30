@@ -28,15 +28,16 @@ const WindowSizeDisplay: React.FC = () => {
       };
     }
   }, []);
-   // Empty dependency array ensures this only runs once when the component mounts
+  // Empty dependency array ensures this only runs once when the component mounts
 
   return (
-    <div className="bg-white text-black">
+    <div className="absolute w-full h-full  text-black ">
       <div>
         <strong>Window Size:</strong>
       </div>
       <div>Width: {windowSize.width}px</div>
       <div>Height: {windowSize.height}px</div>
+
     </div>
   );
 };
