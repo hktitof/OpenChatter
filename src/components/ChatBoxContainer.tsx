@@ -11,7 +11,6 @@ export default function ChatBoxContainer({
   children: React.ReactNode;
 }) {
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
   useEffect(() => {
     const checkMobileScreen = () => {
@@ -36,21 +35,11 @@ export default function ChatBoxContainer({
     }
   }, [setWindowHeight]);
 
-  const toggleChatBox = () => {
-    if (isAnimating) return;
-
-    setIsAnimating(true);
-
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
-  };
-
   return (
     <div
       className={` rounded-xl shadow-2xl w-full flex-grow transform transition-all duration-500 ease-in-out ${
         isOpen ? "scale-100 opacity-100" : "scale-95 opacity-90 "
-      } border-black pointer-events-auto`}
+      } border-black pointer-events-auto z-50`}
       style={{
         height: isMobile ? `calc(${windowHeight}px - 100px)` : "75vh", // Adjust for mobile
         maxHeight: "90vh", // Set max height for larger screens
@@ -59,18 +48,9 @@ export default function ChatBoxContainer({
         willChange: "transform, opacity",
       }}
     >
-      <div className="w-full h-full overflow-hidden rounded-xl">
-        <div className="sm:hidden absolute top-4 left-4 z-10">
-          <button
-            className={`text-gray-600 hover:text-gray-900 transition-all duration-300 ${isOpen ? "rotate-180" : ""}`}
-            onClick={toggleChatBox}
-          >
-            {isOpen ? "← Back" : "→ Open"}
-          </button>
-        </div>
-
+      <div className="w-full h-full overflow-hidden rounded-xl bg-white">
         <div
-          className={`h-full flex flex-col transition-all duration-500 ease-in-out transform ${
+          className={`relative h-full flex flex-col transition-all duration-500 ease-in-out transform ${
             isOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
