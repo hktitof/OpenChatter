@@ -28,7 +28,7 @@ export default function ChatBoxContent() {
       <div className="flex-grow overflow-auto flex-col space-y-4">
         {/* Chat Messages */}
         {/* // ! Message from agent */}
-        <div className="pl-4 font flex-col space-y-2 w-full pt-3">
+        <div className="pl-4 font  w-full pt-3">
           <div
             className="bg-gray-100 p-4 rounded-br-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block"
             style={{ maxWidth: "66.666667%" }}
@@ -39,7 +39,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ? Message from Sender */}
-        <div className="pr-4 font flex-col space-y-2 w-full flex justify-end">
+        <div className="pr-4 w-full flex justify-end">
           <div
             className="bg-blue-500 text-white p-4 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block ml-auto relative"
             style={{ maxWidth: "66.666667%" }}
@@ -52,7 +52,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ! Message from agent */}
-        <div className="pl-4 font flex-col space-y-2 w-full ">
+        <div className="pl-4 font  w-full pt-3">
           <div
             className="bg-gray-100 p-4 rounded-br-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block"
             style={{ maxWidth: "66.666667%" }}
@@ -63,7 +63,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ? Message from Sender */}
-        <div className="pr-4 font flex-col space-y-2 w-full flex justify-end">
+        <div className="pr-4 w-full flex justify-end">
           <div
             className="bg-blue-500 text-white p-4 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block ml-auto relative"
             style={{ maxWidth: "66.666667%" }}
@@ -76,7 +76,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ! Message from agent */}
-        <div className="pl-4 font flex-col space-y-2 w-full ">
+        <div className="pl-4 font  w-full pt-3">
           <div
             className="bg-gray-100 p-4 rounded-br-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block"
             style={{ maxWidth: "66.666667%" }}
@@ -87,7 +87,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ? Message from Sender */}
-        <div className="pr-4 font flex-col space-y-2 w-full flex justify-end">
+        <div className="pr-4 w-full flex justify-end">
           <div
             className="bg-blue-500 text-white p-4 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block ml-auto relative"
             style={{ maxWidth: "66.666667%" }}
@@ -100,7 +100,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ! Message from agent */}
-        <div className="pl-4 font flex-col space-y-2 w-full ">
+        <div className="pl-4 font  w-full pt-3">
           <div
             className="bg-gray-100 p-4 rounded-br-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block"
             style={{ maxWidth: "66.666667%" }}
@@ -111,7 +111,7 @@ export default function ChatBoxContent() {
           </div>
         </div>
         {/* // ? Message from Sender */}
-        <div className="pr-4 font flex-col space-y-2 w-full flex justify-end">
+        <div className="pr-4 w-full flex justify-end">
           <div
             className="bg-blue-500 text-white p-4 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl break-words inline-block ml-auto relative"
             style={{ maxWidth: "66.666667%" }}
@@ -126,7 +126,7 @@ export default function ChatBoxContent() {
       </div>
 
       {/* Input Area */}
-      <div className="sticky bottom-0 border-t-2 border-gray-200 p-4 flex items-center space-x-2 mb-2">
+      <div className="sticky bottom-0 border-t-2 border-gray-200 p-4 flex items-center space-x-2 mb-1">
         {/* Text Input */}
         <input
           type="text"
